@@ -153,3 +153,87 @@ weighted avg       0.88      0.88      0.88      4946
 
 Como foi observado o Committe obteve uma precisão de 0.89 para resultados positivos e 0.89 para resultados negativos. E uma acurácia de 0.88.
 Chegando a conclusão que a combinação dos 3 algoritmos obteve um melhor resultado em relação aos 3 individualmente.
+
+## 4. Desenvolvimento
+
+Com o desenvolvimento de uma Api node.js foi possível controlar as requisições provindas de um cliente. Onde ocorre onde ocorrem as requisições do tipo cadastro de um novo App, listagem remoção do mesmo. E listagem das Reviews dos usuários por app.
+
+Os dados são salvos numa Base [MongoDb](https://www.mongodb.com/)  no formato json.
+
+O intuito da API é manter o cadastro dos apps no banco de dados. Um processo agendado irá executar, recuperar os apps cadastrados e extrair todos atributos através da biblioteca google scraper e Apple Scraper. O processo agendado poderá rodar num período definido.
+
+#### Tela de Cadastro, listagem e exclusão dos Apps
+
+<img src="./Images/TelaCadastroApps.jpg" width="600" height="350">
+
+#### Tela de Listagem dos Comentários
+
+<img src="./Images/TelaListagemReviews.jpg" width="600" height="350">
+
+*NOTA: Para o frontend foi usado o framework Angular;
+
+### Telas de DashBoard
+
+Através da Ferramenta [Echarts](https://echarts.apache.org/en/index.html) da Apache é possível desenvolver diversos painéis.
+Usando os filtros por App é possível relacionar uma pior ou melhor avalia com base nas avaliações dos usuários. Como por exemplo cruzar uma relação de scores por estrelas (amostra qualitativa) agrupando por App onde obtem-se os indicadores exibidos nos paineis.
+O Echarts é uma poderosa ferramenta que proporciona a criação de uma imensa quantidade de painéis, dependendo da necessidade. Exemplos podem ser visto no [link](https://echarts.apache.org/examples/en/index.html).
+
+Abaixo são apresentados alguns modelos desenvolvidos com o Echarts possibilitados em razão do esforço de classificação.
+
+#### Painel de Indicadores por Loja e APP
+
+<img src="./Images/SentimentPizza.jpg" width="600" height="350">
+
+Com o painel mostrado acima é possível relacionar a qualificação de um App por loja.
+
+#### Painel de Ranking de App por Loja
+
+<img src="./Images/RakingPositividade.jpg" width="400" height="350">
+
+Comparativo da quantidade de avaliações negativas por loja usado como parâmetro o app Whastapp;
+
+#### Painel de Percentualidade de Classificação
+
+<img src="./Images/GraficoPizzaApple.jpg" width="400" height="350">       <img src="./Images/GraficoPizzaGoogle.jpg" width="400" height="350">   
+
+Percentual de positivo de negativo filtrado por App e loja.
+
+#### Painel de Raking de Positividade
+
+<img src="./Images/PercentualApps.jpg" width="500" height="350">
+
+5 maiores percentuais de avaliação positiva.
+
+#### Painel de Análise temporal
+
+<img src="./Images/QuantitativoTempo.jpg" width="500" height="350">
+
+Análise temporal do número de comentários positivos e negativos, apenas para aplicativos da Play Store, com filtro por apps;
+
+#### Painel de Histograma por Amostra Qualitativa
+
+<img src="./Images/HistogramaQualitativo.jpg" width="500" height="350">
+
+Histograma de estrelas, com filtro de apps.
+
+#### Junção de Pespetivas
+
+<img src="./Images/JuncaoAnalise2.jpg" width="700" height="450">
+
+Painel com uma união de diferentes visões.
+
+## Controle de Versão e Repositório
+
+Para controle de versão foi usado a ferramenta Git e para hospedagem de o projeto foi usada a plataforma Github. Onde para cada participante do projeto foi criada uma Branch. 
+Ao término de um MVP foram realizados os merges de todas as Branchs com a Master, acompanhado do relatório do projeto.
+
+### Código de Execução
+
+Na imagem abaixo segue um exemplo do código projeto utilizando a IDE Visual Studio Code.
+Executando a linguagem javasctript do servidor node.js;
+
+<img src="./Images/IDEVisualStudio.png" width="500" height="350">
+
+## Referências
+[Project Repository in GitHub](https://github.com/MarcosMendes9389/app_store_sentiment)
+
