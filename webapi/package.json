@@ -17,7 +17,7 @@
     "express": "4.17.1",
     "express.js": "^1.0.0",
     "google-play-scraper": "7.1.2",
-    "knex": "^0.21.1",
+    "knex": "^2.4.0",
     "mongodb": "^3.5.7",
     "morgan": "1.10.0"
   },
